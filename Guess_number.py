@@ -1,6 +1,5 @@
 import sys
 import random
-from enum import Enum
 
 
 def gn(name='PlayerOne'):
