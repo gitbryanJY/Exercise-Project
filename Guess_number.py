@@ -31,13 +31,7 @@ def gn(name='PlayerOne'):
         def decide_winner(player, computer):
             nonlocal name
             nonlocal player_wins
-            if player == 1 and computer == 1:
-                player_wins += 1
-                return f"{name}, you win!"
-            elif player == 2 and computer == 2:
-                player_wins += 1
-                return f"{name}, you win!"
-            elif player == 3 and computer == 3:
+            if player == computer:
                 player_wins += 1
                 return f"{name}, you win!"
             else:
