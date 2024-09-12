@@ -2,7 +2,7 @@ import sys
 import random
 
 
-def gn(name='PlayerOne'):
+def gn(name='PlayerOne', standalone=True):
     game_count = 0
     player_wins = 0
 
@@ -63,10 +63,15 @@ def gn(name='PlayerOne'):
         else:
             print("\n🎉🎉🎉🎉")
             print("Thank you for playing!\n")
-            sys.exit(f"Bye {name}! 👋")
+            if standalone:
+                sys.exit(f"Bye {name}! 👋")
+            else:
+                return
 
     return play_gn
 
+
+guessnumber = gn
 
 if __name__ == "__main__":
     import argparse
@@ -82,5 +87,5 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    guessnumber = gn(args.name)
+    guessnumber = gn(args.name, standalone=True)
     guessnumber()
