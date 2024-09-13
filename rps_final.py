@@ -19,7 +19,7 @@ def rps(name='PlayerOne', standalone=True):
             SCISSORS = 3
 
         playerchoice = input(
-            f"\n{name}, please enter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors:\n\n")
+            f"\n{name}, please enter... \n1 for Rock,\n2 for Paper, or \n3 for Scissors\n\n")
 
         if playerchoice not in ["1", "2", "3"]:
             print(f"{name}, please enter 1, 2, or 3.")
